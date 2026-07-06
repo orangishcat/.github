@@ -3,24 +3,71 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <main class="flex w-full h-full justify-center place-items-center">
-    <div class="w-full h-full max-w-7xl max-h-240 p-16">
+  <main class="flex w-full h-full p-16 justify-center place-items-center">
+    <div class="w-full h-full max-w-7xl">
+      <div class="flex justify-center w-full m-4">
+        <img src="src/assets/neon banner.avif" class="w-2/5" />
+      </div>
       <div
-        class="grid grid-rows-[3fr_2fr_3fr] grid-cols-[1fr_3fr_1fr] w-full h-full content-stretch justify-items-stretch"
+        class="grid grid-cols-[1fr_3fr_1fr] content-stretch justify-items-stretch [&>div]:p-4 rounded-2xl border border-gray-600 mb-12"
       >
-        <!-- First row -->
-        <div></div>
-        <img src="src/assets/neon banner.avif" />
+        <!-- First column -->
         <div></div>
 
-        <!-- Second row -->
-        <div></div>
-        <div></div>
-        <div></div>
+        <!-- Second column -->
+        <div class="border-gray-600 border-l border-r space-y-6">
+          <div>
+            <h1>About me</h1>
+            <p>
+              <span class="text-lg">Hi hi!</span><br />
+              I'm a <ac>high school programmer</ac> who occasionally codes things!<br
+              />
+            </p>
+            <p>
+              I mainly use <ac>HTML/CSS</ac>,
+              <ac>JS</ac>,
+              <ac>Python</ac>, and
+              <ac>Java</ac>.
+              <br />
+              I want to try <ac>Rust</ac> and perhaps get better at <ac>C++</ac
+              >.
+            </p>
+            <p>
+              Some facts about me:
+              <ul>
+                <li>I live in <ac>California, USA!</ac></li>
+                <li>I like <ac>cats</ac>! (obviously)</li>
+                <li>I like <ac>the outdoors</ac> too!</li>
+                <li>
+                  I'm a <ac>night owl</ac>. My sleep schedule is utterly
+                  terrible.
+                </li>
+                <li>
+                  I don't really have a favorite color, but if I had to choose
+                  it would probably be <span class="text-primary">orange</span>.
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div>
+            <h1>My ideal desk setup</h1>
+            <img src="src/assets/table.avif" class="w-full my-4" />
+            <p>
+              Honestly, it's not too different from what I have right now! It's
+              mainly the cat and the houseplant that I'm missing.
+            </p>
+            <p>Also, who needs a monitor anyway? Just get a big laptop.</p>
+          </div>
+          <div>
+            <p>
+              Thank you for making it to the end! Hope you have a nice day <span
+                class="text-red-400">&lt;3</span
+              >
+            </p>
+          </div>
+        </div>
 
-        <!-- Third row -->
-        <div></div>
-        <img src="src/assets/table.avif" />
+        <!-- Third column -->
         <div></div>
       </div>
     </div>
