@@ -1,118 +1,109 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <Layout>
-  <main class="flex w-full h-full p-16 justify-center place-items-center">
-    <div class="w-full h-full max-w-6xl">
-      <div class="flex justify-center w-full m-4">
-        <img src="src/assets/neon banner.avif" class="w-2/5" />
-      </div>
+  <Banner />
+  <div
+    class="grid grid-cols-[1fr_3fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
+  >
+    <!-- First column -->
+    <div class="flex flex-col [&>div]:p-2 text-center">
+      <img src="/src/assets/plant.avif" class="-mb-1.5" />
       <div
-        class="grid grid-cols-[1fr_3fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
+        class="flex flex-col border border-gray-600 bg-background [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
       >
-        <!-- First column -->
-        <div class="flex flex-col [&>div]:p-2 text-center">
-          <img src="/src/assets/plant.avif" class="-mb-1.5" />
-          <div
-            class="flex flex-col border border-gray-600 bg-background [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
-          >
-            <h2>Socials</h2>
-            <a href="https://github.com/orangishcat">
-              <div>GitHub</div>
-            </a>
-            <span class="text-xs text-gray-400">
-              I do have other social media accounts, I just never use them.
-            </span>
-          </div>
-          <div class="border border-gray-600 mt-2">
-            <h2>Projects</h2>
-            <div class="flex flex-col"></div>
-          </div>
-          <br />
-          <div class="border border-gray-600">Devlog</div>
-          <br />
-        </div>
+        <h2>Socials</h2>
+        <a href="https://github.com/orangishcat">
+          <div>GitHub</div>
+        </a>
+        <span class="text-xs text-gray-400">
+          I do have other social media accounts, I just never use them.
+        </span>
+      </div>
+      <div class="border border-gray-600 mt-2">
+        <h2>Projects</h2>
+        <div class="flex flex-col"></div>
+      </div>
+      <br />
+      <div class="border border-gray-600">Devlog</div>
+      <br />
+    </div>
 
-        <!-- Second column -->
-        <div class="border-gray-600 border space-y-6 p-4">
-          <div>
-            <h1>About me</h1>
-            <p>
-              <span class="text-lg">Hi hi!</span><br />
-              I'm a <ac>high school programmer</ac> who occasionally codes random
-              stuff!
-              <br />
-            </p>
-            <p>
-              I mainly use <ac>HTML/CSS</ac>,
-              <ac>JS</ac>,
-              <ac>Python</ac>, and
-              <ac>Java</ac>.
-              <br />
-              I want to try <ac>Rust</ac> and perhaps get better at
-              <ac>C++</ac>.
-            </p>
-            <p>
-              Some facts about me:
-              <ul>
-                <li>I live in <ac>California, USA</ac>!</li>
-                <li>I like <ac>cats</ac>! (obviously)</li>
-                <li>I like <ac>the outdoors</ac> too!</li>
-                <li>
-                  I'm a <ac>night owl</ac>. My sleep schedule is utterly
-                  terrible.
-                </li>
-                <li>
-                  I don't really have <ac>a favorite color</ac>, but if you
-                  asked me I would probably say <span class="text-primary"
-                    >orange</span
-                  >.
-                </li>
-              </ul>
-            </p>
-          </div>
-          <div>
-            <h1>My ideal desk setup</h1>
-            <img src="src/assets/table.avif" class="w-full my-4" />
-            <p>
-              Honestly, it's not too different from what I have right now! It's
-              mainly the cat and the houseplant that I'm missing.
-            </p>
-            <p>Also, who needs a monitor anyway? Just get a big laptop.</p>
-          </div>
-          <div>
-            <p>
-              Thank you for making it to the end! Hope you have a nice day <span
-                class="text-red-400">&lt;3</span
-              >
-            </p>
-          </div>
-        </div>
-
-        <!-- Third column -->
-        <div class="flex flex-col text-center">
-          <img src="/src/assets/cat sleep 3.avif" class="-mb-1.5 z-10" />
-          <div
-            class="[&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:py-1 [&>a>div]:justify-center p-2 border-gray-600 border"
-          >
-            <h2>Links</h2>
-            <a href="/about-me">
-              <div>About me</div>
-            </a>
-            <a href="/projects">
-              <div>Projects</div>
-            </a>
-            <a href="/blog">
-              <div>Blog</div>
-            </a>
-          </div>
+    <!-- Second column -->
+    <div class="border-gray-600 border space-y-6 p-4">
+      <div>
+        <h1>About me</h1>
+        <p>
+          <span class="text-lg">Hi hi!</span><br />
+          I'm a <ac>high school programmer</ac> who occasionally codes random stuff!
           <br />
-          <div class="border-gray-600 border p-2">
-            <h2>Blog</h2>
-          </div>
-        </div>
+        </p>
+        <p>
+          I mainly use <ac>HTML/CSS</ac>,
+          <ac>JS</ac>,
+          <ac>Python</ac>, and
+          <ac>Java</ac>.
+          <br />
+          I want to try <ac>Rust</ac> and perhaps get better at
+          <ac>C++</ac>.
+        </p>
+        <p>
+          Some facts about me:
+          <ul>
+            <li>I live in <ac>California, USA</ac>!</li>
+            <li>I like <ac>cats</ac>! (obviously)</li>
+            <li>I like <ac>the outdoors</ac> too!</li>
+            <li>
+              I'm a <ac>night owl</ac>. My sleep schedule is utterly terrible.
+            </li>
+            <li>
+              I don't really have <ac>a favorite color</ac>, but if you asked me
+              I would probably say <span class="text-primary">orange</span>.
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <h1>My ideal desk setup</h1>
+        <img src="src/assets/table.avif" class="w-full my-4" />
+        <p>
+          Honestly, it's not too different from what I have right now! It's
+          mainly the cat and the houseplant that I'm missing.
+        </p>
+        <p>Also, who needs a monitor anyway? Just get a big laptop.</p>
+      </div>
+      <div>
+        <p>
+          Thank you for making it to the end! Hope you have a nice day <span
+            class="text-red-400">&lt;3</span
+          >
+        </p>
       </div>
     </div>
-  </main>
+
+    <!-- Third column -->
+    <div class="flex flex-col text-center">
+      <img src="/src/assets/cat sleep 3.avif" class="-mb-1.5 z-10" />
+      <div
+        class="[&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:py-1 [&>a>div]:justify-center p-2 border-gray-600 border"
+      >
+        <h2>Links</h2>
+        <a href="/about-me">
+          <div>About me</div>
+        </a>
+        <a href="/projects">
+          <div>Projects</div>
+        </a>
+        <a href="/blog">
+          <div>Blog</div>
+        </a>
+      </div>
+      <br />
+      <div class="border-gray-600 border p-2">
+        <h2>Blog</h2>
+      </div>
+    </div>
+  </div>
 </Layout>

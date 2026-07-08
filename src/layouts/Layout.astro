@@ -1,15 +1,19 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<link href="src/styles/global.css" rel="stylesheet" />
-		<meta name="generator" content={Astro.generator} />
-		<title>orangishcat's website</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="src/styles/global.css" rel="stylesheet" />
+    <meta name="generator" content={Astro.generator} />
+    <title>orangishcat's website</title>
+  </head>
+  <body>
+    <main class="flex w-full h-full p-16 justify-center place-items-center">
+      <div class="w-full h-full max-w-6xl">
+        <slot />
+      </div>
+    </main>
+  </body>
 </html>
