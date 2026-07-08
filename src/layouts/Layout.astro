@@ -1,5 +1,9 @@
+---
+import { ClientRouter } from "astro:transitions";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scrollbar-thin scrollbar-gutter-stable">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -8,9 +12,10 @@
     <link href="src/styles/global.css" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <title>orangishcat's website</title>
+    <ClientRouter />
   </head>
   <body>
-    <main class="flex w-full h-full p-16 justify-center place-items-center">
+    <main class="mx-auto p-16 place-items-center ml-1">
       <slot />
     </main>
   </body>
