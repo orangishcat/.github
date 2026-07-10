@@ -1,0 +1,23 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Banner from "../../components/Banner.astro";
+import Links from "../../components/Links.astro";
+const posts = Object.values(import.meta.glob("./*.mdx", { eager: true }));
+---
+
+<Layout>
+  <div class="w-full h-full max-w-3xl">
+    <Banner />
+    <div
+      class="grid grid-cols-[3fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
+    >
+      <div class="border-gray-600 border space-y-6 p-4">
+        <h1 class="text-center">Blog</h1>
+        {posts.map((post: any) => <p>{post.frontmatter.title}</p>)}
+      </div>
+      <div>
+        <Links />
+      </div>
+    </div>
+  </div>
+</Layout>
