@@ -37,46 +37,94 @@ import Links from "../components/Links.astro";
       <!-- Second column -->
       <div class="border-gray-600 border space-y-6 p-4">
         <div>
-          <h1>About me</h1>
+          <h2>About me</h2>
           <p>
             <span class="text-lg">Hi hi!</span><br />
             I'm a <ac>high school programmer</ac> who occasionally codes random stuff!
             <br />
           </p>
           <p>
-            I mainly use <ac>HTML/CSS</ac>,
-            <ac>JS</ac>,
-            <ac>Python</ac>, and
-            <ac>Java</ac>.
-            <br />
-            I want to try <ac>Rust</ac> and perhaps get better at
-            <ac>C++</ac>.
+            I post my projects, blog posts, and devlogs on this website. This
+            site is just my little corner of the internet :D
+          </p>
+          <p>
+            I'm definitely not a great artist, but I try out art sometimes just
+            for fun!
           </p>
           <p>
             Some facts about me:
             <ul>
               <li>I live in <ac>California, USA</ac>!</li>
-              <li>I like <ac>cats</ac>! (obviously)</li>
-              <li>I like <ac>the outdoors</ac> too!</li>
+              <li>I like cats! (obviously)</li>
+              <li>I like the outdoors too!</li>
+              <li>I'm a night owl. My sleep schedule is utterly terrible.</li>
               <li>
-                I'm a <ac>night owl</ac>. My sleep schedule is utterly terrible.
+                I don't really have a favorite color, but if you asked me I
+                would probably say <span class="text-primary">orange</span>.
               </li>
               <li>
-                I don't really have <ac>a favorite color</ac>, but if you asked
-                me I would probably say <span class="text-primary">orange</span
-                >.
+                <a href="/about-me" class="text-accent">More about me</a>
               </li>
             </ul>
           </p>
         </div>
         <div>
-          <h1>My ideal desk setup</h1>
-          <img src="/src/assets/table.avif" class="w-full my-4" />
+          <h2>Programming skillset</h2>
           <p>
-            Honestly, it's not too different from what I have right now! It's
-            mainly the cat and the houseplant that I'm missing.
+            I specialize mostly in webdev and Minecraft modding, and I know a
+            lot about Python and have used it for robotics and data science.
           </p>
-          <p>Also, who needs a monitor anyway? Just get a big laptop.</p>
+          <p>
+            I have worked with C++ for robotics before, but I want to improve
+            and also try out Rust. I usually don't focus much on low-level
+            development though, as I fear the segfault very much.
+          </p>
+        </div>
+        <div>
+          <h2>Hobbies</h2>
+          <ul>
+            <li>Programming!</li>
+            <li>
+              Running. It's good exercise that I can do fully by myself, and I
+              can explore the outdoors!
+            </li>
+            <li>Hiking. I like nature and the outdoors, and exploring it.</li>
+            <li>
+              Piano. I used to take classes but then got bored. I now practice
+              occasionally by myself.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>Want to learn</h2>
+          <p>
+            Haven't done much hardware outside of robotics, and I try out art
+            for fun sometimes, like for making this website! I hope to improve
+            at both someday :)
+          </p>
+          <p>
+            And I might want to try composing music? I'm not very good at it
+            though...
+          </p>
+        </div>
+        <div>
+          <h2>Games I like</h2>
+          <div class="grid grid-cols-4 gap-3">
+            <a href="https://www.minecraft.net/en-us">
+              <img src="/src/assets/minecraft.avif" />
+            </a>
+            <a href="https://osu.ppy.sh/">
+              <img src="/src/assets/osu.avif" />
+            </a>
+            <a href="https://deltarune.com/">
+              <img src="/src/assets/deltarune.avif" />
+            </a>
+            <a
+              href="https://store.steampowered.com/app/1660910/Tanks_The_Crusades/"
+            >
+              <img src="/src/assets/ttc.avif" />
+            </a>
+          </div>
         </div>
         <div>
           <p>
@@ -93,6 +141,16 @@ import Links from "../components/Links.astro";
         <br />
         <div class="border-gray-600 border p-2">
           <h2>Blog</h2>
+        </div>
+        <br />
+        <br />
+        <div class="w-full relative">
+          <img src="/src/assets/computer.avif" class="w-full" />
+          <video
+            autoplay
+            muted
+            src="/src/assets/gameplay.webm"
+            class="absolute top-12.5 left-14 w-32"></video>
         </div>
       </div>
     </div>
