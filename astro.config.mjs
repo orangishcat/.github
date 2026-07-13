@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: "https://orangishcat.github.io",
-  integrations: [svelte(), mdx(), sitemap()],
+  integrations: [mdx(), sitemap()],
 
   vite: {
     plugins: [tailwindcss()]
