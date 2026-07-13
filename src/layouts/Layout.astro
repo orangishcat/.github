@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import css from "/src/styles/global.css";
 ---
 
 <!doctype html>
@@ -10,7 +11,7 @@ import { ClientRouter } from "astro:transitions";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link href="/src/styles/global.css" rel="stylesheet" />
+    <link href={css} rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <title>orangishcat's website</title>
     <ClientRouter />
