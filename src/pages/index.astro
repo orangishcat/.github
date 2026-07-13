@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import A from "../components/Anchor.astro";
 import Banner from "../components/Banner.astro";
 import Links from "../components/Links.astro";
 ---
@@ -11,15 +12,15 @@ import Links from "../components/Links.astro";
       class="grid grid-cols-[1fr_3fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
     >
       <!-- First column -->
-      <div class="flex flex-col [&>div]:p-2 text-center">
+      <div class="flex flex-col [&>div]:p-2 text-center relative">
         <img src="/src/assets/plant.avif" class="-mb-1.5" />
         <div
           class="flex flex-col border border-gray-600 bg-background [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
         >
           <h2>Socials</h2>
-          <a href="https://github.com/orangishcat">
+          <A href="https://github.com/orangishcat">
             <div>GitHub</div>
-          </a>
+          </A>
           <span class="text-xs text-gray-400">
             I do have other social media accounts, I just never use them.
           </span>
@@ -32,6 +33,7 @@ import Links from "../components/Links.astro";
         <br />
         <div class="border border-gray-600">Devlog</div>
         <br />
+        <img src="/src/assets/clock.gif" class="w-3/4 ml-auto" />
       </div>
 
       <!-- Second column -->
@@ -63,7 +65,7 @@ import Links from "../components/Links.astro";
                 would probably say <span class="text-primary">orange</span>.
               </li>
               <li>
-                <a href="/about-me" class="text-accent">More about me</a>
+                <A href="/about-me" class="text-accent">More about me</A>
               </li>
             </ul>
           </p>
@@ -71,27 +73,33 @@ import Links from "../components/Links.astro";
         <div>
           <h2>Programming skillset</h2>
           <p>
-            I specialize mostly in webdev and Minecraft modding, and I know a
-            lot about Python and have used it for robotics and data science.
+            I specialize mostly in <ac>webdev</ac> and <ac>Minecraft modding</ac
+            >, and I know a lot about <ac>Python</ac> and have used it for robotics
+            and data science.
           </p>
           <p>
-            I have worked with C++ for robotics before, but I want to improve
-            and also try out Rust. I usually don't focus much on low-level
-            development though, as I fear the segfault very much.
+            I have worked with <ac>C++</ac> for robotics before, but I want to improve
+            and also try out <ac>Rust</ac>. I usually don't focus much on
+            low-level development though, as manual memory management is a pain.
           </p>
         </div>
         <div>
           <h2>Hobbies</h2>
           <ul>
-            <li>Programming!</li>
+            <li><ac>Programming</ac>!</li>
             <li>
-              Running. It's good exercise that I can do fully by myself, and I
-              can explore the outdoors!
+              <ac>Running</ac>. It's good exercise that I can do fully by
+              myself, and I can explore the outdoors!
             </li>
-            <li>Hiking. I like nature and the outdoors, and exploring it.</li>
             <li>
-              Piano. I used to take classes but then got bored. I now practice
-              occasionally by myself.
+              <ac>Hiking</ac>. I like nature and the outdoors, and exploring it.
+            </li>
+            <li>
+              <ac>Piano</ac>. I used to take classes but then got bored. I now
+              practice occasionally by myself.
+            </li>
+            <li>
+              <ac>Video games</ac>!
             </li>
           </ul>
         </div>
@@ -110,20 +118,20 @@ import Links from "../components/Links.astro";
         <div>
           <h2>Games I like</h2>
           <div class="grid grid-cols-4 gap-3">
-            <a href="https://www.minecraft.net/en-us">
+            <A href="https://www.minecraft.net/en-us">
               <img src="/src/assets/minecraft.avif" />
-            </a>
-            <a href="https://osu.ppy.sh/">
+            </A>
+            <A href="https://osu.ppy.sh/">
               <img src="/src/assets/osu.avif" />
-            </a>
-            <a href="https://deltarune.com/">
+            </A>
+            <A href="https://deltarune.com/">
               <img src="/src/assets/deltarune.avif" />
-            </a>
-            <a
+            </A>
+            <A
               href="https://store.steampowered.com/app/1660910/Tanks_The_Crusades/"
             >
               <img src="/src/assets/ttc.avif" />
-            </a>
+            </A>
           </div>
         </div>
         <div>
