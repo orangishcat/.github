@@ -1,3 +1,6 @@
+---
+title: Intro
+---
 I've never made a personal website before. If I was ever going to do it, I would do it now, during summer break. I've done plenty of webdev over the past two years or so, and I think I enough just about enough to make the best personal website I could make.
 
 A month and a half ago, I sat down and listed all the ideas I wanted to do for my personal website. 

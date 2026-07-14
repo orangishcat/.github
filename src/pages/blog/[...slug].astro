@@ -2,30 +2,37 @@
 // src/pages/blog/[...slug].astro
 import { getCollection, render } from "astro:content";
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import { routeFor } from "../../data.js";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
+  pages.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
 
-  return pages.map((entry) => ({
-    params: {
-      slug: entry.id,
-    },
-    props: {
-      entry,
-    },
-  }));
+  return pages.map((entry, ind, entries) => {
+    return {
+      params: {
+        slug: routeFor(entry, ind).replace("/blog/", ""),
+      },
+      props: {
+        entry,
+        entries: entries,
+        index: ind,
+      },
+    };
+  });
 }
 
-const { entry } = Astro.props;
+const { entry, entries, index } = Astro.props;
 const { Content } = await render(entry);
+const title =
+  entry.data.title ||
+  entry.filePath?.substring(
+    entry.filePath.lastIndexOf("/") + 1,
+    entry.filePath.lastIndexOf("."),
+  );
 ---
 
-<BlogLayout
-  title={entry.data.title ||
-    entry.filePath?.substring(
-      entry.filePath.lastIndexOf("/"),
-      entry.filePath.lastIndexOf("."),
-    )}
->
+<BlogLayout title={title} entries={entries} index={index}>
+  <h1>{title}</h1>
   <Content />
 </BlogLayout>

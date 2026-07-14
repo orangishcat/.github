@@ -1,6 +1,10 @@
 ---
 import MetaHead from "../components/MetaHead.astro";
-const { title } = Astro.props;
+import Banner from "../components/Banner.astro";
+import A from "../components/Anchor.astro";
+import Links from "../components/Links.astro";
+const { title, entries, index } = Astro.props;
+import { routeFor } from "../data.js";
 ---
 
 <!doctype html>
@@ -12,7 +16,81 @@ const { title } = Astro.props;
 
   <body>
     <main class="mx-auto p-16 place-items-center ml-1">
-      <slot />
+      <div class="w-full h-full max-w-7xl">
+        <Banner />
+        <div class="grid grid-cols-[1fr_4fr_1fr] gap-4">
+          <div class="border border-gray-600">
+            <h2 class="text-center mt-4">TOC</h2>
+            <div class="overflow-y-auto pl-4">
+              {
+                entries.map((entry: any, ind: number) => (
+                  <A href={routeFor(entry, ind)}>
+                    <div
+                      class={
+                        (index === ind ? "text-orange-400" : "text-accent") +
+                        " flex place-items-center gap-2"
+                      }
+                    >
+                      <div class="w-2">
+                        {index === ind && <div class="-mb-0.5">&gt;</div>}
+                      </div>
+
+                      <div class="mt-1">
+                        {entry.data.title ||
+                          entry.filePath?.substring(
+                            entry.filePath.lastIndexOf("/") + 1,
+                            entry.filePath.lastIndexOf("."),
+                          )}
+                      </div>
+                    </div>
+                  </A>
+                ))
+              }
+            </div>
+          </div>
+          <div
+            class="border border-gray-600 p-4 [&_a]:text-accent flex flex-col justify-between"
+          >
+            <div class="overflow-auto">
+              <slot />
+            </div>
+
+            <div class="flex w-full text-center px-4 gap-4 mt-4">
+              {
+                entries[index - 1] ? (
+                  <a
+                    href={routeFor(entries[index - 1], index - 1)}
+                    class="w-full"
+                  >
+                    <div class="w-full border hover:bg-background-lighter border-gray-600 rounded-xl py-3">
+                      Previous
+                    </div>
+                  </a>
+                ) : (
+                  <div />
+                )
+              }
+              {
+                entries[index + 1] ? (
+                  <a
+                    href={routeFor(entries[index + 1], index + 1)}
+                    class="w-full"
+                  >
+                    <div class="w-full border hover:bg-background-lighter border-gray-600 rounded-xl py-3">
+                      Next
+                    </div>
+                  </a>
+                ) : (
+                  <div />
+                )
+              }
+            </div>
+          </div>
+          <div>
+            <Links />
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

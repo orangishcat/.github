@@ -31,3 +31,6 @@ export const blogs = [
     date: "July 14, 2026"
   }
 ]
+
+export const routeFor = (entry: any, index: number) =>
+  index === 0 ? `/blog/${entry.id.split("/")[0]}` : `/blog/${entry.id}`;
