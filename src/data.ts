@@ -24,5 +24,10 @@ export const projects = [
 ];
 
 export const blogs = [
-
+  {
+    slug: "personal-website",
+    title: "I learned art, design, and webdev to create my personal website!!",
+    description: "One of the most rewarding projects I have ever done. I learned so much! It is also the only project of mine as of right now that is mostly finished.",
+    date: "July 14, 2026"
+  }
 ]

@@ -2,18 +2,36 @@
 import Layout from "../../layouts/Layout.astro";
 import Banner from "../../components/Banner.astro";
 import Links from "../../components/Links.astro";
-const posts = Object.values(import.meta.glob("./*.{md,mdx}", { eager: true }));
+import A from "../../components/Anchor.astro";
+import { blogs } from "../../data.ts";
 ---
 
 <Layout>
-  <div class="w-full h-full max-w-3xl">
+  <div class="w-full h-full max-w-4xl">
     <Banner />
     <div
-      class="grid grid-cols-[3fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
+      class="grid grid-cols-[4fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
     >
-      <div class="border-gray-600 border space-y-6 p-4">
-        <h1 class="text-center">Blog</h1>
-        {posts.map((post: any) => <p>{post.frontmatter.title}</p>)}
+      <div
+        class="border-gray-600 border space-y-6 [&>a>div]:border-t [&>a>div]:border-gray-700 [&>a>div]:border-b"
+      >
+        <h1 class="text-center my-4">Blog</h1>
+        {
+          blogs.map((obj) => (
+            <A
+              href={`/blog/${obj.slug}`}
+              class="hover:no-underline! hover:brightness-100!"
+            >
+              <div class="hover:bg-background-light px-6 pt-3 pb-4 space-y-1">
+                <h3 class="text-[1.5rem]! leading-7">{obj.title} </h3>
+                <div class="text-[0.95rem] text-gray-200 mb-1.5">
+                  <span class="text-sm text-gray-400">({obj.date})</span>
+                  {obj.description}
+                </div>
+              </div>
+            </A>
+          ))
+        }
       </div>
       <div>
         <Links />

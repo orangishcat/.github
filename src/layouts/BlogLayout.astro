@@ -1,13 +1,15 @@
 ---
 import MetaHead from "../components/MetaHead.astro";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scrollbar-thin scrollbar-gutter-stable">
   <head>
     <MetaHead />
-    <title>orangishcat's happy place</title>
+    <title>{(title && `${title} | `) + "orangishcat's happy place"}</title>
   </head>
+
   <body>
     <main class="mx-auto p-16 place-items-center ml-1">
       <slot />
