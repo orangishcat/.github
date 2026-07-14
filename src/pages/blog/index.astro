@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Banner from "../../components/Banner.astro";
 import Links from "../../components/Links.astro";
-const posts = Object.values(import.meta.glob("./*.mdx", { eager: true }));
+const posts = Object.values(import.meta.glob("./*.{md,mdx}", { eager: true }));
 ---
 
 <Layout>

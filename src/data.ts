@@ -22,3 +22,7 @@ export const projects = [
     note: "Contributor"
   },
 ];
+
+export const blogs = [
+
+]
