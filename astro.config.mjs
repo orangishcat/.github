@@ -11,12 +11,11 @@ export default defineConfig({
   site: "https://orangishcat.github.io",
   integrations: [mdx(), sitemap()],
   markdown: {
-        processor: unified({
-          remarkPlugins: [remarkObsidianImages],
-          rehypePlugins: [rehypeImagesAvif],
-        }),
-      },
-
+      processor: unified({
+        remarkPlugins: [remarkObsidianImages],
+        rehypePlugins: [rehypeImagesAvif],
+      }),
+    },
   vite: {
     plugins: [tailwindcss()]
   }
