@@ -4,7 +4,9 @@
 @theme {
   --color-primary: oklch(0.7779 0.1381 77);
   --color-accent: oklch(0.8219 0.1696 294.88);
-  --color-background: #211f19;
+  --color-background: oklch(0.2394 0.0115 91.74);
+  --color-background-light: oklch(0.2805 0.0115 91.74);
+  --color-background-lighter: oklch(0.3481 0.0115 91.74);
 }
 
 html,
