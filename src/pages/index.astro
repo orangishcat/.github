@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import A from "../components/Anchor.astro";
 import Banner from "../components/Banner.astro";
 import Links from "../components/Links.astro";
+import { projects } from "../data.js";
 ---
 
 <Layout>
@@ -25,14 +26,35 @@ import Links from "../components/Links.astro";
             I do have other social media accounts, I just never use them.
           </span>
         </div>
-        <br />
-        <img src="/assets/clock.apng" class="w-1/2 mx-auto" />
-        <div class="border border-gray-600">
-          <h2>Projects</h2>
-          <div class="flex flex-col"></div>
+        <div class="my-8"></div>
+        <img src="/assets/clock.apng" class="w-1/2 mx-auto -mb-0.5 z-10" />
+        <div class="border border-gray-600 p-0!">
+          <h2 class="mt-2">Projects</h2>
+          <div
+            class="text-left [&>a>div]:border-t [&>a>div]:border-gray-700 [&>a>div]:border-b"
+          >
+            {
+              projects.map((obj) => (
+                <A
+                  href={obj.url}
+                  class="hover:no-underline! hover:brightness-100!"
+                >
+                  <div class="hover:bg-background-light text-xs px-2 pt-1 pb-2 group">
+                    <h3 class="text-[1.35rem]!">{obj.title} </h3>
+                    {obj.note && (
+                      <div class="mb-1 text-sm text-gray-300">({obj.note})</div>
+                    )}
+                    <div class="text-[0.75rem] line-clamp-2 group-hover:line-clamp-none max-h-12 group-hover:max-h-60 transition-colors duration-400 ease-in-out text-gray-400 group-hover:text-white">
+                      {obj.description}
+                    </div>
+                  </div>
+                </A>
+              ))
+            }
+          </div>
         </div>
         <br />
-        <a href="/blog">
+        <a href="/blog" class="absolute bottom-8 hover:scale-130 transition">
           <img src="/assets/book.apng" />
         </a>
         <br />
