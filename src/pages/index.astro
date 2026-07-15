@@ -13,16 +13,16 @@ import { projects, blogs } from "../data.ts";
       class="grid grid-cols-[1fr_3fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
     >
       <!-- First column -->
-      <div class="flex flex-col [&>div]:p-2 text-center relative">
-        <img draggable="false" src="/assets/plant.avif" class="-mb-1.5" />
+      <div class="flex flex-col [&>div]:py-2 text-center relative">
+        <img draggable="false" src="/assets/plant.avif" class="-mb-1.5 z-10" />
         <div
           class="flex flex-col border border-gray-600 bg-background [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
         >
-          <h2>Socials</h2>
+          <h2 class="border-b border-gray-600">Socials</h2>
           <A href="https://github.com/orangishcat">
             <div>GitHub</div>
           </A>
-          <span class="text-xs text-gray-400">
+          <span class="text-xs text-gray-400 px-2">
             I do have other social media accounts, I just never use them.
           </span>
         </div>
@@ -34,7 +34,7 @@ import { projects, blogs } from "../data.ts";
         />
         <div class="border border-gray-600 p-0!">
           <h2 class="mt-2">Projects</h2>
-          <div class="text-left [&>a>div]:border-t [&>a>div]:border-gray-700">
+          <div class="text-left [&>a>div]:border-t [&>a>div]:border-gray-600">
             {
               projects.map((obj) => (
                 <A
@@ -178,7 +178,7 @@ import { projects, blogs } from "../data.ts";
         <br />
         <div class="border-gray-600 border pt-2">
           <h2>Blog</h2>
-          <div class="[&>a>div]:border-t [&>a>div]:border-gray-700 text-left">
+          <div class="[&>a>div]:border-t [&>a>div]:border-gray-600 text-left">
             {
               blogs.map((obj) => (
                 <A
