@@ -38,5 +38,5 @@ export const blogs = [
   }
 ]
 
-export const routeFor = (entry: any, index: number) =>
-  index === 0 ? `/blog/${entry.id.split("/")[0]}` : `/blog/${entry.id}`;
+export const routeFor = (entry: any, index: number, prefix: string = "/blog/") =>
+  prefix + (index === 0 ? entry.id.split("/")[0] : entry.id);
