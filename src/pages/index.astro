@@ -14,7 +14,7 @@ import { projects } from "../data.ts";
     >
       <!-- First column -->
       <div class="flex flex-col [&>div]:p-2 text-center relative">
-        <img src="/assets/plant.avif" class="-mb-1.5" />
+        <img draggable="false" src="/assets/plant.avif" class="-mb-1.5" />
         <div
           class="flex flex-col border border-gray-600 bg-background [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
         >
@@ -27,7 +27,11 @@ import { projects } from "../data.ts";
           </span>
         </div>
         <div class="my-8"></div>
-        <img src="/assets/clock.apng" class="w-1/2 mx-auto -mb-0.5 z-10" />
+        <img
+          draggable="false"
+          src="/assets/clock.apng"
+          class="w-1/2 mx-auto -mb-0.5 z-10"
+        />
         <div class="border border-gray-600 p-0!">
           <h2 class="mt-2">Projects</h2>
           <div
@@ -54,12 +58,12 @@ import { projects } from "../data.ts";
           </div>
         </div>
         <br />
-        <a
+        <A
           href="/blog/personal-website"
           class="absolute bottom-8 hover:scale-130 transition"
         >
-          <img src="/assets/book.apng" />
-        </a>
+          <img draggable="false" src="/assets/book.apng" />
+        </A>
         <br />
       </div>
 
@@ -146,18 +150,18 @@ import { projects } from "../data.ts";
           <h2>Games I like</h2>
           <div class="grid grid-cols-4 gap-3">
             <A href="https://www.minecraft.net/en-us">
-              <img src="/assets/minecraft.avif" />
+              <img draggable="false" src="/assets/minecraft.avif" />
             </A>
             <A href="https://osu.ppy.sh/">
-              <img src="/assets/osu.avif" />
+              <img draggable="false" src="/assets/osu.avif" />
             </A>
             <A href="https://deltarune.com/">
-              <img src="/assets/deltarune.avif" />
+              <img draggable="false" src="/assets/deltarune.avif" />
             </A>
             <A
               href="https://store.steampowered.com/app/1660910/Tanks_The_Crusades/"
             >
-              <img src="/assets/ttc.avif" />
+              <img draggable="false" src="/assets/ttc.avif" />
             </A>
           </div>
         </div>
@@ -180,7 +184,7 @@ import { projects } from "../data.ts";
         <br />
         <br />
         <div class="w-full relative">
-          <img src="/assets/computer.avif" class="w-full" />
+          <img draggable="false" src="/assets/computer.avif" class="w-full" />
           <video
             autoplay
             muted
