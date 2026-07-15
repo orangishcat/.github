@@ -11,7 +11,7 @@ import { routeFor } from "../data.js";
 <html lang="en" class="scrollbar-thin scrollbar-gutter-stable">
   <head>
     <MetaHead />
-    <title>{(title && `${title} | `) + "orangishcat's happy place"}</title>
+    <title>{(title ? `${title} | ` : "") + "orangishcat's happy place"}</title>
   </head>
 
   <body>
