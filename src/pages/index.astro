@@ -173,7 +173,7 @@ import { projects, blogs } from "../data.ts";
       </div>
 
       <!-- Third column -->
-      <div class="text-center">
+      <div class="text-center relative">
         <Links />
         <br />
         <div class="border-gray-600 border pt-2">
@@ -182,7 +182,7 @@ import { projects, blogs } from "../data.ts";
             {
               blogs.map((obj) => (
                 <A
-                  href={`/blogs/${obj.slug}`}
+                  href={`/blog/${obj.slug}`}
                   class="hover:no-underline! hover:brightness-100!"
                 >
                   <div class="p-2 group hover:bg-background-light">
@@ -203,13 +203,15 @@ import { projects, blogs } from "../data.ts";
         </div>
         <br />
         <br />
-        <div class="w-full relative">
-          <img draggable="false" src="/assets/computer.avif" class="w-full" />
-          <video
-            autoplay
-            muted
-            src="/assets/gameplay.webm"
-            class="absolute top-12.5 left-14 w-32"></video>
+        <div class="absolute bottom-12 right-0 w-full">
+          <div class="w-full relative">
+            <img draggable="false" src="/assets/computer.avif" class="w-full" />
+            <video
+              autoplay
+              muted
+              src="/assets/gameplay.webm"
+              class="absolute top-12.5 left-14 w-32"></video>
+          </div>
         </div>
       </div>
     </div>
