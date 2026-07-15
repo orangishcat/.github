@@ -5,6 +5,7 @@
   --color-primary: oklch(0.7779 0.1381 77);
   --color-accent: oklch(0.8219 0.1696 294.88);
   --color-background: oklch(0.2394 0.0115 91.74);
+  --color-background-dark: oklch(0.1988 0.0115 91.74);
   --color-background-light: oklch(0.2805 0.0115 91.74);
   --color-background-lighter: oklch(0.3481 0.0115 91.74);
 }
@@ -15,7 +16,7 @@ body {
   width: 100%;
   height: 100%;
   image-rendering: pixelated;
-  @apply text-base text-white bg-background;
+  @apply text-base text-white bg-background-dark;
   font-family: "Geist Pixel", sans-serif;
 }
 
