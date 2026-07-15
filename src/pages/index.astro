@@ -41,7 +41,7 @@ import { projects, blogs } from "../data.ts";
                   href={obj.url}
                   class="hover:no-underline! hover:brightness-100!"
                 >
-                  <div class="hover:bg-background-light text-xs px-2 pt-1 pb-2 group">
+                  <div class="hover:bg-background-light text-xs px-2 pt-1 pb-2 group transition-colors duration-400">
                     <h3 class="text-[1.35rem]!">{obj.title} </h3>
                     {obj.note && (
                       <div class="mb-1 text-sm text-gray-300">({obj.note})</div>
@@ -175,7 +175,7 @@ import { projects, blogs } from "../data.ts";
       <!-- Third column -->
       <div class="text-center relative">
         <Links />
-        <br />
+        <div class="py-8"></div>
         <div class="border-gray-600 border pt-2">
           <h2>Blog</h2>
           <div class="[&>a>div]:border-t [&>a>div]:border-gray-600 text-left">
@@ -185,13 +185,11 @@ import { projects, blogs } from "../data.ts";
                   href={`/blog/${obj.slug}`}
                   class="hover:no-underline! hover:brightness-100!"
                 >
-                  <div class="p-2 group hover:bg-background-light">
+                  <div class="p-2 group hover:bg-background-light transition-colors duration-400">
                     <h3 class="text-[1.15rem]! line-clamp-2 group-hover:line-clamp-none w-full leading-5">
                       {obj.title}
                     </h3>
-                    {obj.note && (
-                      <div class="mb-1 text-sm text-gray-300">({obj.date})</div>
-                    )}
+                    <div class="mb-1 text-sm text-gray-300">({obj.date})</div>
                     <div class="text-[0.75rem] line-clamp-2 group-hover:line-clamp-none max-h-12 group-hover:max-h-60 transition-colors duration-400 ease-in-out text-gray-400 group-hover:text-white">
                       {obj.description}
                     </div>

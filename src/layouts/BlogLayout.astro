@@ -22,7 +22,7 @@ import { routeFor } from "../data.js";
           <!-- First column -->
           <div>
             <div class="border border-gray-600 pt-2 pb-8 mt-8">
-              <h2 class="text-center">TOC</h2>
+              <h2 class="text-center">Table of Contents</h2>
               <div class="overflow-y-auto pl-4">
                 {
                   entries.map((entry: any, ind: number) => (
@@ -34,7 +34,11 @@ import { routeFor } from "../data.js";
                         }
                       >
                         <div class="w-2">
-                          {index === ind && <div class="-mb-0.5">&gt;</div>}
+                          {index === ind ? (
+                            <div class="-mb-0.5">&gt;</div>
+                          ) : (
+                            <div class="text-gray-400 -mb-0.5">-</div>
+                          )}
                         </div>
 
                         <div class="mt-1">
@@ -56,7 +60,9 @@ import { routeFor } from "../data.js";
           <div
             class="border border-gray-600 p-4 flex flex-col justify-between font-sans"
           >
-            <div class="overflow-auto [&_a]:text-accent">
+            <div
+              class="overflow-auto [&_a]:text-accent [&_pre]:p-2 [&_pre]:rounded-xl"
+            >
               <slot />
             </div>
 

@@ -29,6 +29,12 @@ export const blogs = [
     title: "I learned art, design, and webdev to create my personal website!!",
     description: "One of the most rewarding projects I have ever done. I learned so much! It is also the only project of mine as of right now that is mostly finished.",
     date: "July 14, 2026"
+  },
+  {
+    slug: "page-proxy",
+    title: "Page Proxy Devlogs",
+    description: "Devlogs about my Chrome/Firefox extension and userscript manager, Page Proxy!",
+    date: "April 30, 2026"
   }
 ]
 

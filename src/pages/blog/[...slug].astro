@@ -6,23 +6,33 @@ import { routeFor } from "../../data.js";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
-  pages.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
 
-  return pages.map((entry, ind, entries) => {
-    return {
-      params: {
-        slug: routeFor(entry, ind).replace("/blog/", ""),
-      },
-      props: {
-        entry,
-        entries: entries,
-        index: ind,
-      },
-    };
-  });
+  // use grouping so that all subsections within a blog post are isolated from other blogs
+  const grouped = Map.groupBy(pages, ({ id }) => id.split("/")[0]);
+
+  return Array.from(grouped.entries()).flatMap((blog) =>
+    // `blog` is an array containing [id, entries]
+    blog[1]
+      .toSorted((a, b) =>
+        a.id.localeCompare(b.id, undefined, { numeric: true }),
+      )
+      .map((blogPart, ind, entries) => {
+        return {
+          params: {
+            slug: routeFor(blogPart, ind).replace("/blog/", ""),
+          },
+          props: {
+            entry: blogPart,
+            entries: entries,
+            index: ind,
+            blogId: blog[0],
+          },
+        };
+      }),
+  );
 }
 
-const { entry, entries, index } = Astro.props;
+const { entry, entries, index, blogId } = Astro.props;
 const { Content } = await render(entry);
 const title =
   entry.data.title ||
@@ -30,9 +40,10 @@ const title =
     entry.filePath.lastIndexOf("/") + 1,
     entry.filePath.lastIndexOf("."),
   );
+const postEntries = entries.filter((entry) => entry.id.startsWith(blogId));
 ---
 
-<BlogLayout title={title} entries={entries} index={index}>
+<BlogLayout title={title} entries={postEntries} index={index}>
   <h1>{title}</h1>
   <Content />
 </BlogLayout>
