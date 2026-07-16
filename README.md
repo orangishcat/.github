@@ -1,5 +1,5 @@
 hello!
 
-i like coding stuff
+this is the source code for my personal website. all assets are drawn by me!
 
-![Wakatime](https://github-readme-stats.hackclub.dev/api/wakatime?username=7490&api_domain=hackatime.hackclub.com&&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8&theme=dracula)
+License: ARR
