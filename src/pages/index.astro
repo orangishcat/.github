@@ -16,7 +16,7 @@ import { projects, blogs } from "../data.ts";
       <div class="flex flex-col [&>div]:py-2 text-center relative">
         <img draggable="false" src="/assets/plant.avif" class="-mb-1.5 z-10" />
         <div
-          class="flex flex-col border border-gray-600 bg-background [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
+          class="flex flex-col border border-gray-600 bg-background/80 [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
         >
           <h2 class="border-b border-gray-600">Socials</h2>
           <A href="https://github.com/orangishcat">
@@ -32,7 +32,7 @@ import { projects, blogs } from "../data.ts";
           src="/assets/clock.apng"
           class="w-1/2 mx-auto -mb-0.5 z-10"
         />
-        <div class="border border-gray-600 p-0! bg-background">
+        <div class="border border-gray-600 bg-background/80 p-0!">
           <h2 class="mt-2">Projects</h2>
           <div class="text-left [&>a>div]:border-t [&>a>div]:border-gray-600">
             {
@@ -66,7 +66,7 @@ import { projects, blogs } from "../data.ts";
       </div>
 
       <!-- Second column -->
-      <div class="border-gray-600 border space-y-6 p-4 bg-background">
+      <div class="border-gray-600 border space-y-6 p-4 bg-background/80">
         <div>
           <h2>About me</h2>
           <p>
@@ -176,7 +176,7 @@ import { projects, blogs } from "../data.ts";
       <div class="text-center relative">
         <Links />
         <div class="py-8"></div>
-        <div class="border-gray-600 border pt-2 bg-background">
+        <div class="border-gray-600 border pt-2 bg-background/80">
           <h2>Blog</h2>
           <div class="[&>a>div]:border-t [&>a>div]:border-gray-600 text-left">
             {

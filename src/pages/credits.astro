@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Banner from "../components/Banner.astro";
+import Links from "../components/Links.astro";
+import A from "../components/Anchor.astro";
+---
+
+<Layout title="Credits">
+  <div class="w-full h-full max-w-4xl mx-auto">
+    <Banner />
+    <div
+      class="grid grid-cols-[4fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
+    >
+      <div
+        class="border border-gray-600 bg-background/80 p-4 [&_a]:text-accent"
+      >
+        <h1>Credits</h1>
+        <p>
+          I drew all assets by myself, and did the implementation by myself too!
+        </p>
+        <p>But I do feel like I was standing on the shoulders of giants.</p>
+        <p>So huge thanks to:</p>
+        <ul>
+          <li>
+            <ac>Astro</ac> developers, for making such an amazing web framework!
+          </li>
+          <li>
+            <ac>TypeScript</ac> developers, for making JavaScript somewhat usable!
+          </li>
+          <li>
+            <ac>Krita</ac> developers, for making an absolutely awesome yet FOSS art
+            program!
+          </li>
+          <li>
+            <ac>GitHub Pages</ac> and <ac>Neocities</ac>, for providing reliable
+            file hosting and my custom subdomain, all for free!
+          </li>
+          <li>
+            Other Neocities websites, for giving me inspiration! Specifically:
+            <ul>
+              <li><A href="https://dimden.dev">dimden.dev</A></li>
+              <li>
+                <A href="https://xiokka.neocities.org">xiokka.neocities.org</A>
+              </li>
+              <li>
+                <A href="https://lilithdev.neocities.org"
+                  >lilithdev.neocities.org</A
+                >
+              </li>
+            </ul>
+            <p>I really liked your sites and thank you for the inspiration!</p>
+          </li>
+          <li>
+            And <ac>YOU</ac>! for visting my site!
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Links />
+      </div>
+    </div>
+  </div>
+</Layout>

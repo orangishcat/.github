@@ -7,4 +7,8 @@
     "label": "build",
     "command": "bun run build",
   },
+  {
+    "label": "preview",
+    "command": "bun run preview"
+  }
 ]
