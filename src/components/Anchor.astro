@@ -8,7 +8,5 @@ const external = href.startsWith("http");
   target={external ? "_blank" : undefined}
   rel={external ? "noopener noreferrer" : undefined}
   draggable="false"
-  {...props}
+  {...props}><slot /></a
 >
-  <slot />
-</a>
