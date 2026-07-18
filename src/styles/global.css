@@ -15,7 +15,7 @@ body {
   image-rendering: pixelated;
   font-family: "Geist Pixel", sans-serif;
   background-image: url('/assets/bg.avif'), url('/assets/stars only.avif');
-  background-position: top center, 64px center;
+  background-position: center top, center 64px;
   background-repeat: no-repeat, repeat-y;
   background-size: 100% auto, 100% auto;
 }
