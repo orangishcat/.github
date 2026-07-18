@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "orangishcat's happy place",
     description: "(Personal website, the one you're looking at right now)",
-    url: "https://orangishcat.github.io",
+    url: "/",
   },
   {
     title: "Better Clouds",
