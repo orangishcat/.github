@@ -15,16 +15,30 @@ import { projects, blogs } from "../data.ts";
       <!-- First column -->
       <div class="flex flex-col [&>div]:py-2 text-center relative">
         <img draggable="false" src="/assets/plant.avif" class="-mb-1.5 z-10" />
-        <div
-          class="flex flex-col border border-gray-600 bg-background/80 [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:justify-center"
-        >
+        <div class="flex flex-col border border-gray-600 bg-background/80">
           <h2 class="border-b border-gray-600">Socials</h2>
-          <A href="https://github.com/orangishcat">
-            <div>GitHub</div>
-          </A>
-          <span class="text-xs text-gray-400 px-2">
-            I do have other social media accounts, I just never use them.
-          </span>
+          <div
+            class="text-left space-y-2 [&>a]:block mx-auto [&>a>div]:flex [&>a>div]:gap-2 [&>a>div]:place-items-center [&>a>div>img]:w-6 py-2"
+          >
+            <A href="https://github.com/orangishcat">
+              <div>
+                <img src="/assets/github.avif" />
+                <div>GitHub</div>
+              </div>
+            </A>
+            <A href="https://www.reddit.com/user/Safe_Paper_9540/">
+              <div>
+                <img src="/assets/reddit.avif" />
+                <div>Reddit</div>
+              </div>
+            </A>
+            <A href="https://neocities.org/site/orangishcat">
+              <div>
+                <img src="/assets/neocities.avif" />
+                <div>Neocities</div>
+              </div>
+            </A>
+          </div>
         </div>
         <div class="my-8"></div>
         <img
